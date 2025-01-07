@@ -6,6 +6,7 @@ import LogoutButton from "./LogoutButton";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   // Grab user name
   const { user, isAuthenticated } = useAuth0();
