@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 
-const { loginWithRedirect, user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+const { isAuthenticated, getAccessTokenSilently } = useAuth0(); //loginWithRedirect, user,
 
 const login = async () => {
     if (isAuthenticated) {
@@ -14,6 +14,7 @@ const login = async () => {
                 body: JSON.stringify({ auth0_token: token }),
             });
             const data = await response.json();
+            console.log(data);
 
         }  catch (error){
             console.error('Error during authentication:', error);
